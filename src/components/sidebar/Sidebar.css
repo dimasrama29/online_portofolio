@@ -1,6 +1,6 @@
-/* Variabel CSS untuk konsistensi warna */
+
 :root {
-  --sidebar-bg: orange;
+  --sidebar-bg: #1e1e1e;
   --sidebar-text: #ffffff;
   --sidebar-hover-bg: #333333;
   --sidebar-active-bg: #646cff;
@@ -82,10 +82,9 @@
   font-size: 1.2em;
 }
 
-/* Toggle Button */
 .sidebar-toggle {
   position: fixed;
-  top: 15px; /* Sesuaikan dengan tinggi Navbar */
+  top: 15px;
   left: 15px;
   font-size: 24px;
   color: var(--toggle-color);
@@ -95,7 +94,7 @@
   padding: 8px;
   cursor: pointer;
   z-index: 1100;
-  display: none; /* Disembunyikan di desktop secara default */
+  display: none;
   transition: background-color 0.3s;
 }
 
@@ -103,11 +102,10 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Overlay saat Sidebar terbuka di Mobile */
 .sidebar.open::before {
   content: '';
   position: fixed;
-  top: 60px; /* Sesuaikan dengan tinggi Navbar */
+  top: 60px;
   left: 0;
   width: 100%;
   height: calc(100% - 60px);
@@ -115,19 +113,18 @@
   z-index: -1;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .sidebar-toggle {
     display: block;
   }
 
   .sidebar {
-    top: 60px; /* Sesuaikan jika tinggi Navbar berubah */
+    top: 60px;
     height: calc(100% - 60px);
   }
 
   main {
-    margin-left: 0; /* Hapus margin di layar kecil */
+    margin-left: 0;
   }
 }
 
@@ -138,10 +135,10 @@
   }
 
   .sidebar-toggle {
-    display: none; /* Sembunyikan tombol toggle di desktop */
+    display: none; 
   }
 
   main {
-    margin-left: 250px; /* Sesuaikan jika lebar Sidebar berubah */
+    margin-left: 250px; 
   }
 }

@@ -1,22 +1,28 @@
-import React, { useEffect } from "react";
-import "./Interest.css";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
+import './Interest.css';
 
 const Interest = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,    
-    });
-  }, []);
+  const interestsData = [
+    {
+      title: 'Coding',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus debitis amet, libero quam deleniti facilis hic ullam voluptatem temporibus, culpa sit consequuntur rerum accusamus nemo laborum non illum. Sunt, voluptas?',
+    },
+    {
+      title: 'Gaming',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus debitis amet, libero quam deleniti facilis hic ullam voluptatem temporibus, culpa sit consequuntur rerum accusamus nemo laborum non illum. Sunt, voluptas?',
+    },
+  ];
 
   return (
-    <div className="about-container">
-      <h2 className="about-title">Interest Saya</h2>
-      <div className="about-header" data-aos="fade-up">
-        <div className="about-intro">
-        </div>
+    <div className="interest-container" data-aos="fade-up">
+      <h2 className="interest-title">Interests</h2>
+      <div className="interest-grid">
+        {interestsData.map((interest, index) => (
+          <div key={index} className="interest-card" data-aos="fade-up" data-aos-delay={index * 100}>
+            <h3 className="interest-title-text">{interest.title}</h3>
+            <p className="interest-description">{interest.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

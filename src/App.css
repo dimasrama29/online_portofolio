@@ -28,7 +28,7 @@ body {
 }
 
 .main-content {
-  margin-left: 250px; /* Adjust based on sidebar width */
+  margin-left: 250px; 
   padding: 20px;
   flex-grow: 1;
 }
@@ -79,23 +79,21 @@ p {
   color: var(--text-dark);
 }
 
-/* CSS untuk Education dan Skill */
 .education-container,
 .skill-container {
-  min-height: 100vh; /* Pastikan ini diatur dengan benar */
-  padding: 40px 20px; /* Tambahkan padding jika diperlukan */
+  min-height: 100vh; 
+  padding: 40px 20px;
 }
 
 .education-grid,
 .skill-grid {
-  display: grid; /* Pastikan ini sesuai dengan tata letak yang diinginkan */
+  display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  max-width: 1200px; /* Atur lebar maksimum jika diperlukan */
-  margin: 0 auto; /* Pusatkan grid */
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
-/* Responsive Styling */
 @media (max-width: 768px) {
   .app-container {
     flex-direction: column;
@@ -108,7 +106,7 @@ p {
 
   .education-container,
   .skill-container {
-    padding: 50px 15px; /* Sesuaikan padding untuk perangkat kecil */
+    padding: 50px 15px;
   }
 
   .education-title,

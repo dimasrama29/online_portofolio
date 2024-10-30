@@ -1,10 +1,9 @@
-// src/components/Home/Home.jsx
 import React from 'react';
 
 const Home = () => {
   return (
     <section>
-      <h1>Welcome</h1>
+      <h1>Hi!</h1>
     </section>
   );
 };

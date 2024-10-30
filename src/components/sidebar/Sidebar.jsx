@@ -1,5 +1,3 @@
-// src/components/sidebar/Sidebar.jsx
-
 import React, { useState, useEffect, useRef } from 'react';
 import './Sidebar.css';
 import { 
@@ -43,7 +41,6 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Toggle Button */}
       <button 
         className="sidebar-toggle" 
         onClick={handleToggleSidebar} 
@@ -53,11 +50,8 @@ const Sidebar = () => {
         {isOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
       </button>
 
-      {/* Sidebar */}
       <nav ref={sidebarRef} className={`sidebar ${isOpen ? 'open' : ''}`} aria-label="Main Navigation">
         <div className="sidebar-header">
-          <h1 className="sidebar-logo">
-          </h1>
         </div>
         <ul className="sidebar-menu">
           <li>
@@ -70,12 +64,6 @@ const Sidebar = () => {
             <Link to="/about" className="sidebar-link" onClick={handleToggleSidebar}>
               <FaUser className="sidebar-icon" />
               About
-            </Link>
-          </li>
-          <li>
-            <Link to="/education" className="sidebar-link" onClick={handleToggleSidebar}>
-              <FaUniversity className="sidebar-icon" />
-              Education
             </Link>
           </li>
           <li>
